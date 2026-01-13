@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Sammyyy❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe4ec, #fff8f0);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2.5rem;
+      color: #e63946;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      gap: 15px;
+      max-width: 800px;
+    }
+
+    .gallery img {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .notes {
+      margin: 40px auto;
+      max-width: 700px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .note {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      color: #444;
+      transition: transform 0.2s;
+    }
+
+    .note:hover {
+      transform: translateY(-5px);
+    }
+
+    .heart-button {
+      margin: 40px;
+      font-size: 1.2rem;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      background: #e63946;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .heart-button:hover {
+      background: #c91d2a;
+    }
+
+    #compliment {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      color: #222;
+      min-height: 30px;
+    }
+
+    footer {
+      margin: 50px 0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: 0;
+      font-size: 24px;
+      color: #e63946;
+      animation: floatUp 6s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>for jaanu babyy Sammyyy🤭❤️</h1>
+  <p>you’re the most beautiful part of my world and this little corner of the internet is just for you.</p>
+
+  <div class="gallery">
+    <!-- Replace with your photos -->
+    <img src="images/" alt="">
+    <img src="images/" alt="">
+    <img src="images/" alt="">
+    <img src="images/" alt="">
+  </div>
+
+  <h2>little things i love about you 💌(this section will keep getting updated hehe)</h2>
+  <div class="notes">
+    <div class="note">your smile makes everything better for me Sammyyy 🤭🤭🤭</div>
+    <div class="note">i absolutely love how you think and care for me</div>
+    <div class="note">i love love love when you randomly hold my hand 🤭</div>
+    <div class="note">you inspire me to be my best self and work hard</div>
+    <div class="note">iloveyouuuuuuuuuuu ❤️❤️❤️</div>
+<div class="note">ummmmmmmaaahhhhhhh 😘😘😘</div>
+
+    <div class="note">you're the only one who has ever been this concerned for me 😭😭😭</div>
+
+
+  </div>
+
+  <button class="heart-button" onclick="showCompliment()">💖 Click me 💖</button>
+  <div id="compliment"></div>
+
+  <footer>
+  🌷🌷🌷🌷 made with khooooob saaaaara pyaar for my Sammyyy😋😋😋🌷🌷🌷🌷
+  </footer>
+
+  <script>
+    const compliments = [
+      "you're my favorite and will always be ummmmmah 😘😘😘 <3",
+      "you areeeee so soo sooooooo soooooooooooooo pyaari 🥰🥰🥰",
+      "you're my peace and homeeeeee😘😘😘",
+      "it's absolutely unreal how you manage to look godly in every outfit you carry hehe😌, ummmmmmah 😘😘😘",
+      "you make me change into a better person each and every day, iloveyouuuuu soooo sooooo soooooooooo muchhhhhhhh babyyyy ❤️❤️❤️"
+    ];
+
+    function showCompliment() {
+      const random = compliments[Math.floor(Math.random() * compliments.length)];
+      document.getElementById("compliment").innerText = random;
+    }
+
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 700);
+  </script>
+</body>
+</html>
